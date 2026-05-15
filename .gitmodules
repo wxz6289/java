@@ -4,3 +4,6 @@
 [submodule "mybatis"]
 	path = mybatis
 	url = git@github.com:wxz6289/mybatis.git
+[submodule "base"]
+	path = base
+	url = git@github.com:wxz6289/base.git
