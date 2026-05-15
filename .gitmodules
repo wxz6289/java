@@ -7,3 +7,6 @@
 [submodule "base"]
 	path = base
 	url = git@github.com:wxz6289/base.git
+[submodule "browser"]
+	path = browser
+	url = git@github.com:wxz6289/browser.git
