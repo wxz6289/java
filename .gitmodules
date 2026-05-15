@@ -4,3 +4,6 @@
 [submodule "spring/springboot"]
 	path = spring/springboot
 	url = ./spring/springboot
+[submodule "mybatis"]
+	path = mybatis
+	url = git@github.com:wxz6289/mybatis-submodule.git
