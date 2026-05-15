@@ -4,11 +4,12 @@
 
 | 路径 | 说明 |
 |------|------|
-| **`mybatis/`** | **Git 子模块** → 独立仓库 [`wxz6289/mybatis-submodule`](https://github.com/wxz6289/mybatis-submodule)（Spring Boot + MyBatis，`pom.xml` 与 `src/` 在该仓库根目录） |
+| **`mybatis/`** | **Git 子模块** → [`wxz6289/mybatis`](https://github.com/wxz6289/mybatis)（Spring Boot + MyBatis 工程本体） |
 | **`spring/`** | Spring 体系示例与 Gradle 工程 |
 | **`AndroidBrowser/`** | Android 浏览器示例 |
-| **`java`** | 子模块（Git submodule），Java 基础等独立仓库 |
-| **`springboot`** | 子模块引用（见 `.gitmodules`） |
+| **`springboot`** | 子模块引用（见 `.gitmodules`；`spring/springboot` 路径需与仓库实际一致） |
+
+> 说明：父仓库已更名为 **`wxz6289/java`** 后，原先指向 `wxz6289/java.git` 的嵌套子模块 **`java/`** 会与父仓库 URL 冲突，已从本聚合仓移除。若仍需「Java 基础」独立仓库，请新建例如 `wxz6289/java-notes` 后再执行 `git submodule add`。
 
 ## 运行 MyBatis 示例
 
@@ -34,10 +35,12 @@ git commit -m "chore: bump mybatis submodule"
 git push origin main
 ```
 
-父仓库中的 `mybatis` 目录记录的是**子模块 commit SHA**，日常改代码在子模块仓库完成。
+父仓库（**[`wxz6289/java`](https://github.com/wxz6289/java)**）中的 `mybatis` 目录记录的是**子模块 commit SHA**，日常改代码在子模块仓库完成。
 
 克隆后若子模块为空，请执行：
 
 ```bash
+git clone --recurse-submodules git@github.com:wxz6289/java.git
+# 或
 git submodule update --init --recursive
 ```
